@@ -8,3 +8,5 @@ public class Passageiro {
     // Nota: Por enquanto usamos 'public' para facilitar o aprendizado.
     // Nas próximas aulas, aprenderemos a proteger esses dados.
 }
+
+// AULA 1 POO
