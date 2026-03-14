@@ -1,18 +1,67 @@
 package br.com.fiapride.model;
 
 public class Carro {
-    public String marca;
-    public String tipoCambio;
-    public String tipoTracao;
-    public double velocidadeMaxima; // novo atributo
-    public double velocidadeAtual; // Novo atributo
+    private String marca;
+    private String tipoCambio;
+    private String tipoTracao;
+    private double velocidadeMaxima; // novo atributo
+    private double velocidadeAtual; // Novo atributo
 
     public Carro(String marca, String tipoCambio) {
+        setMarca(marca);
         this.marca = marca;
         this.tipoCambio = tipoCambio;
         this.velocidadeMaxima = 250;
         this.velocidadeAtual = 0; // começa parado
     }
+
+    public String getMarca() {
+        return this.marca;
+    }
+
+    public void setMarca(String marca) {
+        if (marca == null || marca.isEmpty()) {
+            System.out.println("Não é permitido não informar a marca");
+            return;
+        }
+        this.marca = marca;
+    }
+
+    public String getTipoCambio() {
+        return this.tipoCambio;
+    }
+
+    public void setTipoCambio(String tipoCambio) {
+        this.tipoCambio = tipoCambio;
+    }
+
+
+    public String getTipoTracao() {
+        return this.tipoTracao;
+    }
+
+    public void setTipoTracao(String tipoTracao) {
+        this.tipoTracao = tipoTracao;
+    }
+
+
+    public double getVelocidadeMaxima() {
+        return this.velocidadeMaxima;
+    }
+
+    public void setVelocidadeMaxima(double velocidadeMaxima) {
+        this.velocidadeMaxima = velocidadeMaxima;
+    }
+
+    // ---- GET e SET: velocidadeAtual ----
+    public double getVelocidadeAtual() {
+        return this.velocidadeAtual;
+    }
+
+    public void setVelocidadeAtual(double velocidadeAtual) {
+        this.velocidadeAtual = velocidadeAtual;
+    }
+
 
     // REGRA: não aceita incremento negativo ou zero
     public void acelerar(double incremento) {
